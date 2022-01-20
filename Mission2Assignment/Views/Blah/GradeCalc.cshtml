@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+@model GradeCalcModel;
+
+<!--A "Grade Calculator" form that takes as input a percentage scored for each grade
+category listed in the syllabus-->
+
+
+<br />
+<form method="post">
+    <h3>Grade Calculator</h3>
+    <p>Insert the percentage scored for each grade category listed below. </p>
+    <br />
+    <label>Assignments: </label>
+    <input id="assignments" type="number" asp-for="assignments" style="width:150px; text-align:center;"/>
+    <br /><br />
+    <label>Group Projects: </label>
+    <input id="groupProjects" type="number" asp-for="groupProjects" style="width:150px; text-align:center;"/>
+    <br /><br />
+    <label>Quizzes: </label>
+    <input id="quizzes" type="number" asp-for="quizzes" style="width:150px; text-align:center;"/>
+    <br /><br />
+    <label>Exams: </label>
+    <input id="exams" type="number" asp-for="exams" style="width:150px; text-align:center;"/>
+    <br /><br />
+    <label>INTEX: </label>
+    <input id="intex" type="number" asp-for="intex" style="width:150px; text-align:center;"/>
+    <br /><br />
+    <input id="btnGrade" type="submit" value="Calculate" name="btnGrade" style="width:150px; text-align:center;"/>
+</form>
+<br />
+
+<div style="color:red;" asp-validation-summary="All"></div>
+
+<script src="~/js/mycalc.js"></script>

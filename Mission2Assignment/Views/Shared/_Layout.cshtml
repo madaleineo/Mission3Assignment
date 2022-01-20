@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <!--Style the site using Bootstrap.-->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--Include at least one change to the styling using your own CSS file-->
+    <link href="~/css/mycss.css" rel="stylesheet" />
+
+    <!--An icon for the website (displayed on the tab next to the website title)
+    (#notcoveredinthevideos)-->
+    <link rel="icon" type="image/png" href="~/img/favicon1.png" sizes="16x16">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+
+    <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+</head>
+    <body class="container center-cont">
+
+        <nav>
+            <a asp-controller="Blah" asp-action="Index">Home</a>
+            <a asp-controller="Blah" asp-action="GradeCalc">Grade Calculator</a>
+        </nav>
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <footer>Contact Madaleine Osmun with any concerns.</footer>
+
+        <!--Style the site using Bootstrap.-->
+        <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+        
+    </body>
+</html>
